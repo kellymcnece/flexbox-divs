@@ -8,7 +8,20 @@
 
 /* ==========================================================================
    Base styles: opinionated defaults
+ 
    ========================================================================== */
+
+   @font-face {
+    font-family: bathilda;
+    src: url(../fonts/Bathilda.otf);
+}
+
+
+@font-face {
+    font-family: caslon cp;
+    src: url(../fonts/CaslonCP.otf);
+}
+
 
 html {
     color: #222;
@@ -97,32 +110,40 @@ textarea {
 
 
 html {
-  background-color: black;
+  background-color: #ffff99;
   height: 100%;
 }
 
 body {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'caslon cp', sans-serif;
   padding: 2em;
   font-size: 1.25em;
   height: 100%;
-  color: white;
+  display: flex;
+  justify-content: center;
+  color: #ff80aa;
 }
 
-.wrapper {
+.flex-container {
   /*add display:flex and set justify-content to space-between*/
-  font-weight: 700;
   flex-flow: row wrap;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  max-width: 1200px;
+}
+
+header,
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
 }
 
 .div-1, .div-2, .div-3 {
   /*give the divs a width of 30%, add display:flex, set justify-content and align-items to center*/
-  color: white;
+  color:#ff9966;
   padding: .6em;
-  background: black;
+  background: #ffff99;
   line-height: 1.5em;
   font-size: .9em;
   display: flex;
@@ -132,12 +153,61 @@ body {
 }
 
 .div-1, .div-2 {
-    border-right: solid;
-    border-color: grey;
+    margin: 5px;
+    border-right: dotted;
+    border-color: #e6b3ff;
     border-right-width: .1em;
 }
 
+span {
+    font-family: 'bathilda', sans-serif;
+    font-size: 1.5em;
+    background: linear-gradient(to left, #ff80aa, #ff9966, #e6b3ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+}
 
+
+main {
+    font-weight: 700;
+    flex-flow: row wrap;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffff99;
+    color: #ff80aa;
+    padding-bottom: 2rem;
+}
+
+header h1 {
+    font-family: 'bathilda', serif;
+    font-size: 3rem;
+    padding-top: 1em;
+    background: linear-gradient(to left, #ff80aa, #ff9966, #e6b3ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+main {
+    border-bottom: dotted #e6b3ff .2em;
+}
+
+footer {
+    width: 100%;
+    border-top: dotted #e6b3ff .1em;
+    padding-top: 1em;
+    font-size: 2em;
+}
+
+footer i {
+    display: inline;
+    padding-top: 1em;
+    padding-left: 2em;
+    background: linear-gradient(to right, #ff80aa, #ff9966, #e6b3ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
 
 
